@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - eb --version
-      # - eb deploy $EB_STAGE --staged
+      - eb deploy $EB_STAGE --staged
     finally:
-      - echo Build completed on `date` ...
+      - echo Build completed on `date`
