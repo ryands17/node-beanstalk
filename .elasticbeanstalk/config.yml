@@ -12,6 +12,7 @@ global:
   platform_version: null
   repository: null
   # your aws profile with access and secret keys set
-  profile: default
+  # comment this setting when using CI/CD (e.g. Codebuild)
+  # profile: default
   sc: git
   workspace_type: Application
