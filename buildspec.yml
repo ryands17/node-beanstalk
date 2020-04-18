@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo installing eb-cli
-      - pip install awsebcli --upgrade --user
+      - pip3 install awsebcli --upgrade --user
   build:
     commands:
       - echo Build started on `date`
