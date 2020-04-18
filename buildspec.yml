@@ -1,0 +1,17 @@
+# aws codebuild for React and deployment to S3
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+      python: 3.7
+  pre_build:
+    commands:
+      - echo installing eb-cli
+      - pip install awsebcli --upgrade --user
+  build:
+    commands:
+      - echo Build started on `date`
+      - eb deploy $EB_STAGE --staged
+    finally:
+      - echo Build completed on `date`
