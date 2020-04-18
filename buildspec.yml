@@ -8,10 +8,11 @@ phases:
   pre_build:
     commands:
       - echo installing eb-cli
-      - pip3 install awsebcli --upgrade --user
+      - sudo pip3 install awsebcli --upgrade
   build:
     commands:
       - echo Build started on `date`
-      - eb deploy $EB_STAGE --staged
+      - eb --version
+      # - eb deploy $EB_STAGE --staged
     finally:
       - echo Build completed on `date` ...
